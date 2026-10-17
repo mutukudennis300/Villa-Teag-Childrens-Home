@@ -1,0 +1,81 @@
+/* =========================================================
+   VILLA TEAG — CONTACT PAGE ONLY
+   Depends on css/mutuku.css and Bootstrap.
+========================================================= */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 34px;
+  padding: clamp(18px, 3.5vw, 34px);
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  background: #FFFFFF;
+  box-shadow: 0 12px 35px rgba(16,42,86,.08);
+}
+
+.contact-form { display: flex; flex-direction: column; min-width: 0; }
+.contact-form h2, .contact-info h2 { margin: 0 0 10px; color: #102A56; font-size: 1.55rem; text-align: left; }
+.form-intro { margin: 0 0 20px; color: #526176; }
+.contact-form form { display: flex; flex-direction: column; gap: 14px; }
+.contact-form .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 9px;
+  color: #17263D;
+  background: #F8FAFC;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #102A56;
+  outline: 3px solid rgba(16,42,86,.12);
+}
+.contact-form textarea { min-height: 145px; resize: vertical; }
+.contact-form button[type="submit"] {
+  align-self: flex-start;
+  min-width: 170px;
+  padding: 13px 24px;
+  border: 2px solid #102A56;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background: #102A56;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: none;
+}
+.contact-form button[type="submit"]:hover { color: #0A1B36; background: #F4C542; border-color: #F4C542; transform: translateY(-1px); }
+
+.contact-info { display: flex; flex-direction: column; gap: 15px; min-width: 0; }
+.info-card { padding: 19px; border: 1px solid #E2E8F0; border-left: 4px solid #F4C542; border-radius: 12px; background: #F6F8FC; }
+.info-card h3 { margin: 0 0 6px; color: #102A56; font-size: 1.08rem; }
+.info-card p { margin: 0; color: #526176; }
+
+.map-container { width: 100%; margin: 28px auto 38px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(16,42,86,.08); }
+.map-container iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+/* If the page displays the child-safeguarding notice instead of a map, it remains fully responsive. */
+.map-container[style*="display: flex"] { min-height: 190px; }
+
+@media (max-width: 900px) {
+  .contact-section { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .contact-section { gap: 22px; padding: 20px 15px; }
+  .contact-form .form-row { grid-template-columns: 1fr; }
+  .contact-form button[type="submit"] { width: 100%; }
+  .contact-form h2, .contact-info h2 { font-size: 1.35rem; }
+  .map-container iframe { aspect-ratio: 4 / 3; }
+}

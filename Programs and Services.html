@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Villa Teag Children's Home's programmes in education, residential care, psychosocial support, recreation, family reintegration and youth development.">
+    <title>Programmes and Services | Villa Teag Children's Home</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mutuku.css">
+    <link rel="stylesheet" href="css/programs%26services.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Page-specific additions; the main design remains in your CSS files. */
+        .placement-card.highlight-card {
+            border: 2px solid #198754;
+            background-color: #f8f9fa;
+        }
+
+        .programmes-cta {
+            margin: 3rem auto;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .programmes-cta p {
+            max-width: 760px;
+            margin: 0.75rem auto 1.5rem;
+        }
+
+        .programmes-cta .cta-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+        }
+
+        .programmes-cta .cta-link {
+            display: inline-block;
+            padding: 0.75rem 1.2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid currentColor;
+        }
+
+        .programmes-cta .cta-link:focus-visible,
+        .horizontal-menu a:focus-visible,
+        .site-footer a:focus-visible {
+            outline: 3px solid #f4c542;
+            outline-offset: 3px;
+        }
+
+        .programmes-note {
+            max-width: 960px;
+            margin: 1rem auto 2rem;
+            padding: 1rem 1.25rem;
+            border-left: 4px solid #f4c542;
+            background: #fff8df;
+            border-radius: 0.4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-links li { margin-bottom: 0.25rem; }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1rem;
+            border-radius: 999px;
+            background: #168348;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+        }
+
+        .whatsapp-float:hover { color: #fff; filter: brightness(0.94); }
+
+        @media (max-width: 600px) {
+            .whatsapp-float { right: 12px; bottom: 12px; padding: 0.7rem 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SITE HEADER -->
+    <header class="site-header">
+        <nav class="navbar-hub" aria-label="Main navigation">
+            <a class="brand-logo" href="index.html" style="text-decoration: none; color: inherit;">
+                Villa Teag <br> Children's Home
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle navigation menu">
+            <label for="menu-toggle" class="hamburger" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="horizontal-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Programs and Services.html" class="active" aria-current="page">Programmes</a></li>
+                <li><a href="Get Involved.html">Get Involved</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="safeguarding.html">Child Safeguarding</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/254722221267"
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with Villa Teag Children's Home on WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        <span>Chat with us</span>
+    </a>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h1>Programmes and Services</h1>
+            <p>Comprehensive care addressing every aspect of a child's development and long-term self-reliance.</p>
+        </section>
+
+        <!-- MAIN PROGRAMMES LAYOUT -->
+        <section class="container programmes-section" aria-labelledby="core-programmes-title">
+            <h2 id="core-programmes-title">Our Core Programmes</h2>
+            <p class="programmes-note">Our programmes put children's safety, individual needs, development, and future opportunities first. Each child receives services and care arrangements tailored to their circumstances and authorised care plan.</p>
+
+            <div class="program-grid">
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Education Programme</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Structured academic placement and learning support tailored to each child's needs, including learning materials, school participation, and mentorship.</p>
+                        <ul class="program-features">
+                            <li>School placement and coordination with education providers</li>
+                            <li>Individual tutoring and focused study groups</li>
+                            <li>School uniforms and essential learning resources</li>
+                            <li>Support with transitions between school levels</li>
+                            <li>Secondary-school and vocational guidance pathways</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Residential Care &amp; Protection</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>A protective, caring living environment that supports children's day-to-day welfare, dignity and stability.</p>
+                        <ul class="program-features">
+                            <li>Safe accommodation and appropriate sleeping arrangements</li>
+                            <li>Nutritious meals and structured meal routines</li>
+                            <li>Hygiene supplies and personal-care guidance</li>
+                            <li>Day-to-day welfare support and appropriate record keeping</li>
+                            <li>Child safeguarding procedures and safety monitoring</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Counselling &amp; Psychosocial Support</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Emotional and psychosocial support helps children develop resilience, healthy relationships and coping skills. We arrange specialist care when needed through appropriate providers.</p>
+                        <ul class="program-features">
+                            <li>Supportive individual conversations and referrals</li>
+                            <li>Group discussions and positive mentorship</li>
+                            <li>Care that is sensitive to difficult experiences</li>
+                            <li>Healthy coping skills and emotional development</li>
+                            <li>Respect for children's privacy and confidentiality</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Recreation &amp; Creative Activities</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Age-appropriate recreational activities that support physical wellbeing, creativity, social connection and confidence in a safe setting.</p>
+                        <ul class="program-features">
+                            <li>Sports, movement and physical activities</li>
+                            <li>Arts, music, dance and drama</li>
+                            <li>Supervised outdoor play and outings</li>
+                            <li>Hobby development and group clubs</li>
+                            <li>Teamwork, confidence and positive peer relationships</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Family Tracing &amp; Reintegration</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Family tracing and reintegration planning help children maintain or rebuild safe family connections through authorised, individual plans guided by each child's best interests.</p>
+                        <ul class="program-features">
+                            <li>Family tracing through appropriate authorised processes</li>
+                            <li>Assessment of safety and family circumstances by relevant personnel</li>
+                            <li>Planning for authorised family contact and visits</li>
+                            <li>Carefully planned transitions based on the child's best interests</li>
+                            <li>Follow-up and referrals after a placement change</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-header">
+                        <h3>Life Skills &amp; Youth Development</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Practical learning and mentorship to prepare older children and young people for greater responsibility, further education and independent living.</p>
+                        <ul class="program-features">
+                            <li>Vocational exploration and career guidance</li>
+                            <li>Leadership, communication and character development</li>
+                            <li>Financial literacy and budgeting basics</li>
+                            <li>Cooking, hygiene and home-management skills</li>
+                            <li>Transition planning and self-reliance workshops</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CHILD PLACEMENT AND WELLBEING PLAN -->
+        <section class="placement-section" aria-labelledby="placement-title">
+            <div class="container">
+                <h2 class="section-title" id="placement-title">Child Placement &amp; Wellbeing Plan</h2>
+                <p class="section-intro">Care planning addresses each child's safety, health, education, development, and long-term interests.</p>
+
+                <div class="placement-grid">
+                    <article class="placement-card">
+                        <div class="card-icon" aria-hidden="true">🎓</div>
+                        <h3>Education Tracking</h3>
+                        <p>We support children's participation in education, monitor learning needs, and coordinate with schools and tutors.</p>
+                    </article>
+
+                    <article class="placement-card">
+                        <div class="card-icon" aria-hidden="true">🏥</div>
+                        <h3>Health Oversight</h3>
+                        <p>Help children access appropriate medical attention and health services through authorised providers, with health information handled confidentially.</p>
+                    </article>
+
+                    <article class="placement-card">
+                        <div class="card-icon" aria-hidden="true">🍎</div>
+                        <h3>Nutrition &amp; Meals</h3>
+                        <p>Promote regular, balanced meals and healthy eating habits, taking account of children's needs and available resources.</p>
+                    </article>
+
+                    <article class="placement-card">
+                        <div class="card-icon" aria-hidden="true">🏠</div>
+                        <h3>Shelter &amp; Daily Care</h3>
+                        <p>Maintain appropriate accommodation, bedding, clothing, hygiene and everyday care in a respectful environment.</p>
+                    </article>
+
+                    <article class="placement-card">
+                        <div class="card-icon" aria-hidden="true">🤝</div>
+                        <h3>Psychosocial Wellbeing</h3>
+                        <p>Encourage supportive relationships, emotional wellbeing and access to suitable counselling or specialist referrals when needed.</p>
+                    </article>
+
+                    <article class="placement-card highlight-card">
+                        <div class="card-icon" aria-hidden="true">🛡️</div>
+                        <h3>Safeguarding &amp; Case Support</h3>
+                        <p>Promote children's safety, listen to concerns and follow approved safeguarding and case-management procedures.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKING WITH FAMILIES AND SUPPORTERS -->
+        <section class="container programmes-cta">
+            <h2 class="section-title">Help Us Support Children's Futures</h2>
+            <p>Community members, organisations, and well-wishers strengthen children's access to education, care, health services, and opportunities. Contact the home to discuss current priorities and ways to contribute.</p>
+            <div class="cta-actions">
+                <a class="cta-link" href="Get Involved.html">Support Our Work</a>
+                <a class="cta-link" href="Contact.html">Contact Villa Teag</a>
+                <a class="cta-link" href="safeguarding.html">Read Our Safeguarding Policy</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer mt-auto">
+        <div class="container py-5">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-title">Villa Teag</h2>
+                    <p class="footer-text">An independent children's shelter committed to holistic care, protection and helping children build positive futures in Dandora.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h2 class="footer-title">Quick Links</h2>
+                    <ul class="footer-links" style="list-style: none; padding-left: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Programs and Services.html" aria-current="page">Programmes</a></li>
+                        <li><a href="Get Involved.html">Get Involved</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h2 class="footer-title">Support &amp; Policies</h2>
+                    <ul class="footer-links" style="list-style: none; padding-left: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="Get Involved.html#donate">Support Our Work</a></li>
+                        <li><a href="safeguarding.html">Child Safeguarding Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(128,128,128,0.35);">
+                <p>&copy; <span id="year"></span> Villa Teag Children's Home. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update the copyright year automatically.
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Ensure the mobile menu closes after a visitor selects a page.
+        document.querySelectorAll('.horizontal-menu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var toggle = document.getElementById('menu-toggle');
+                if (toggle) toggle.checked = false;
+            });
+        });
+    </script>
+</body>
+</html>

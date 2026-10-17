@@ -1,0 +1,79 @@
+/* =========================================================
+   VILLA TEAG — ABOUT PAGE ONLY
+   Depends on css/mutuku.css and Bootstrap.
+========================================================= */
+
+/* History / background */
+.history-card {
+  width: min(100% - 30px, 1450px);
+  margin: 24px auto;
+  padding: clamp(18px, 3vw, 34px);
+  border: 1px solid #E2E8F0;
+  border-top: 5px solid #F4C542;
+  border-radius: 18px;
+  background: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(16,42,86,.06);
+}
+.history-title { margin: 0 0 26px; color: #102A56; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 850; letter-spacing: .3px; text-align: center; }
+.history-card p { margin-bottom: 1.1rem; color: #334155; font-size: 1rem; line-height: 1.8; }
+.era-tag { display: inline-block; margin-bottom: 12px; padding: 5px 13px; border-radius: 5px; color: #0A1B36; background: #F4C542; font-size: .82rem; font-weight: 850; text-transform: uppercase; letter-spacing: .4px; }
+.history-divider { height: 1px; margin: 28px 0; border: 0; background: linear-gradient(90deg, transparent, #D9A91D, transparent); }
+.split-middle { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 28px; }
+.middle-text { min-width: 0; }
+.history-image { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 260px; max-height: 440px; overflow: hidden; border-radius: 14px; background: #F6F8FC; box-shadow: 0 10px 24px rgba(16,42,86,.12); }
+.history-img { display: block; width: 100%; height: 100%; min-height: 260px; max-height: 440px; object-fit: contain; object-position: center; }
+.history-wordmark { min-height: 300px; padding: 32px; color: #102A56; background: linear-gradient(135deg, #FFF8DF, #EEF3FA); text-align: center; }
+.history-wordmark span { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; }
+.final-location { margin-top: 22px; padding: 18px; border-left: 5px solid #F4C542; border-radius: 0 10px 10px 0; color: #334155; background: #FFF8DF; }
+
+/* Mission / vision / broad goal */
+.mission-vision { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 26px 0 54px; }
+.mission-card, .vision-card, .Broad-goal { min-width: 0; padding: clamp(22px, 3vw, 34px); border: 1px solid #E2E8F0; border-top: 5px solid #F4C542; border-radius: 15px; background: #FFFFFF; box-shadow: 0 8px 24px rgba(16,42,86,.06); text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
+.mission-card:hover, .vision-card:hover, .Broad-goal:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(16,42,86,.12); }
+.mission-card h3, .vision-card h3, .Broad-goal h3 { margin: 8px 0 12px; color: #102A56; }
+.mission-card p, .vision-card p, .Broad-goal p { margin: 0; color: #526176; }
+.mission-icon, .vision-icon, .value-icon { font-size: 2.3rem; }
+.Broad-goal { grid-column: 1 / -1; }
+
+/* Core values */
+.container2 { width: 100%; margin: 45px 0; padding: 54px 20px; background: linear-gradient(135deg, #f6f8fc, #eef3fa); box-shadow: inset 0 0 40px rgba(16,42,86,.04); }
+.values-section { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.value-card { padding: 28px 21px; border: 1px solid #E2E8F0; border-top: 5px solid #F4C542; border-radius: 15px; background: rgba(255,255,255,.96); box-shadow: 0 8px 24px rgba(16,42,86,.07); text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
+.value-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(16,42,86,.12); }
+.value-card h4 { margin: 12px 0 8px; color: #102A56; }
+.value-card p { margin: 0; color: #526176; font-size: .94rem; }
+
+/* Leadership profiles */
+.team-section { padding: 25px 15px 55px; }
+.team-section .section-heading { margin-bottom: 28px; text-align: center; }
+.staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; max-width: 1200px; margin: 0 auto; }
+.staff-card { overflow: hidden; border: 1px solid #E2E8F0; border-radius: 15px; background: #FFFFFF; box-shadow: 0 8px 25px rgba(16,42,86,.06); transition: transform .25s ease, box-shadow .25s ease; }
+.staff-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(16,42,86,.12); }
+.staff-image { width: 100%; height: 330px; overflow: hidden; background: #EEF3FA; }
+.staff-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.staff-info { padding: 22px; }
+.staff-info h4 { margin: 0 0 5px; color: #102A56; font-size: 1.2rem; }
+.staff-role { margin-bottom: 12px; color: #8B6A10; font-size: .82rem; font-weight: 850; letter-spacing: .7px; text-transform: uppercase; }
+.staff-bio { color: #526176; font-size: .94rem; line-height: 1.7; }
+
+@media (max-width: 1024px) {
+  .values-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .history-image, .history-img { min-height: 230px; }
+}
+@media (max-width: 768px) {
+  .split-middle { grid-template-columns: 1fr; }
+  .history-image { order: -1; min-height: 220px; max-height: 340px; }
+  .history-img { min-height: 220px; max-height: 340px; }
+  .mission-vision { grid-template-columns: 1fr; }
+  .Broad-goal { grid-column: auto; }
+  .staff-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .container2 { padding: 36px 15px; background-attachment: scroll; }
+}
+@media (max-width: 560px) {
+  .history-card { width: calc(100% - 20px); padding: 16px; }
+  .history-card p { font-size: .95rem; }
+  .history-divider { margin: 20px 0; }
+  .values-section, .staff-grid { grid-template-columns: 1fr; }
+  .value-card { padding: 22px 18px; }
+  .staff-image { height: 300px; }
+}
