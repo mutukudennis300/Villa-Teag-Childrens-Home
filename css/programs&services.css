@@ -14,6 +14,7 @@
 .program-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(16,42,86,.12); }
 .program-header { padding: 20px 22px; border-bottom: 1px solid #E2E8F0; background: #F6F8FC; }
 .program-header h3 { margin: 0; color: #102A56; font-size: 1.2rem; font-weight: 800; text-align: left; }
+.program-photo { width: 100%; height: 190px; object-fit: cover; object-position: center; background: #EEF3FA; }
 .program-content { flex: 1; padding: 22px; color: #526176; }
 .program-content p { margin: 0 0 12px; }
 .program-features { margin: 16px 0 0; padding: 0; list-style: none; }
@@ -50,6 +51,7 @@
   .program-grid, .placement-grid, .age-groups, .age-group-grid, .program-details { grid-template-columns: 1fr; }
   .program-details { gap: 18px; }
   .program-image, .detail-img { min-height: 220px; height: 250px; }
+  .program-photo { height: 210px; }
   .placement-section { padding: 28px 0; }
 }
 @media (max-width: 480px) {
@@ -57,4 +59,5 @@
   .placement-card { padding: 22px 17px; }
   .program-info { padding: 22px 18px; }
   .program-image, .detail-img { min-height: 180px; height: 200px; }
+  .program-photo { height: 190px; }
 }

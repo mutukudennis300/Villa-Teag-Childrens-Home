@@ -14,7 +14,7 @@
     .vt-extra-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:12px}
     .vt-extra-hero p{max-width:820px;margin:0 auto;font-size:1.05rem}
     .vt-extra-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin:28px 0}
-    .vt-extra-card{background:#fff;border:1px solid #dce4ef;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(16,42,86,.06)}
+    .vt-extra-card{margin:0;background:#fff;border:1px solid #dce4ef;border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(16,42,86,.06)}
     .vt-extra-card img{width:100%;height:230px;object-fit:cover;display:block}
     .vt-extra-card-body{padding:20px}
     .vt-extra-card h2,.vt-extra-card h3{color:#102a56;font-size:1.25rem;margin-bottom:10px}
@@ -60,16 +60,57 @@
 <section aria-labelledby="gallery-intro"><h2 id="gallery-intro">A glimpse of life and learning</h2>
 <p>These photographs show the environment, activities, and community around Villa Teag Children's Home. We protect every child's privacy, safety, and dignity in the stories and images we share.</p>
 <div class="vt-extra-note"><strong>Photography and child protection</strong><p class="mb-0">The images in this gallery are approved for publication. We do not publish children's full names, private histories, school details, real-time locations, or other sensitive identifying information. Visitors arrange visits in advance.</p></div>
-<div class="vt-extra-grid">
-<figure class="vt-extra-card"><img src="images/images%20(1).jpeg" alt="A shared meal at the home" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Shared mealtimes</h3><p class="mb-0">Everyday routines help create a sense of belonging and care.</p></figcaption></figure>
-<figure class="vt-extra-card"><img src="images/fun.jpg" alt="Children taking part in a recreation activity" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Recreation and expression</h3><p class="mb-0">Play and creative activities can support confidence and connection.</p></figcaption></figure>
-<figure class="vt-extra-card"><img src="images/education.jpg" alt="Children taking part in a computer-based learning activity" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Learning and development</h3><p class="mb-0">Education is an important part of preparing for future opportunities.</p></figcaption></figure>
-<figure class="vt-extra-card"><img src="images/bed.jpeg" alt="A bed in an indoor residential space" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Our environment</h3><p class="mb-0">A supportive environment is an important foundation for daily care.</p></figcaption></figure>
-<figure class="vt-extra-card"><img src="images/group3.jpeg" alt="Children and adults gathered together" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Activities together</h3><p class="mb-0">Shared activities can encourage teamwork, confidence and social development.</p></figcaption></figure>
-<figure class="vt-extra-card"><img src="images/education.jpg" alt="An education activity with a computer" loading="lazy"><figcaption class="vt-extra-card-body"><h3>Support for growth</h3><p class="mb-0">Children benefit from encouragement and opportunities to build their skills.</p></figcaption></figure>
-</div>
+<div class="vt-extra-grid" id="gallery-grid" aria-live="polite"></div>
+<p id="gallery-load-error" role="alert" hidden></p>
 <div class="vt-extra-links"><a href="About.html">Learn about Villa Teag</a><a class="secondary" href="Contact.html">Arrange an enquiry</a></div>
 </main>
+<script>
+  const galleryGrid = document.getElementById("gallery-grid");
+  const galleryError = document.getElementById("gallery-load-error");
+
+  fetch("gallery-images.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Gallery list request failed with status ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((photos) => {
+      if (!Array.isArray(photos)) {
+        throw new Error("Gallery list has an invalid format");
+      }
+
+      for (const photo of photos) {
+        if (
+          !photo ||
+          typeof photo.name !== "string" ||
+          !photo.name.toLowerCase().endsWith(".webp") ||
+          photo.name !== photo.name.split(/[\\/]/).pop()
+        ) {
+          throw new Error("Gallery list contains an invalid photo entry");
+        }
+
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
+        figure.className = "vt-extra-card";
+        image.src = `images/${encodeURIComponent(photo.name)}`;
+        image.alt = typeof photo.alt === "string" ? photo.alt : "Photograph from Villa Teag Children's Home.";
+        image.loading = "lazy";
+        figure.append(image);
+        galleryGrid.append(figure);
+      }
+
+      if (photos.length === 0) {
+        galleryError.hidden = false;
+        galleryError.textContent = "No gallery photographs have been added yet.";
+      }
+    })
+    .catch((error) => {
+      console.error("Unable to load the photo gallery.", error);
+      galleryError.hidden = false;
+      galleryError.textContent = "The gallery photographs could not be loaded. Please try again later.";
+    });
+</script>
 <footer class="site-footer mt-auto">
     <div class="container py-5">
       <div class="footer-grid">
@@ -85,6 +126,7 @@
             <li><a href="About.html">About Us</a></li>
             <li><a href="Programs and Services.html">Programmes</a></li>
             <li><a href="Get Involved.html">Get Involved</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
             <li><a href="Contact.html">Contact Us</a></li>
           </ul>
         </div>

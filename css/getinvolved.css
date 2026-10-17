@@ -4,6 +4,8 @@
 ========================================================= */
 
 /* Page-level headings and intro */
+.involvement-photo { margin: 24px auto; }
+.involvement-photo img { width: 100%; height: clamp(220px, 30vw, 380px); border-radius: 12px; object-fit: cover; object-position: center; }
 .highlight-section { max-width: 1050px; margin: 26px auto 42px; padding: 28px clamp(18px, 4vw, 40px); border-left: 5px solid #F4C542; border-radius: 12px; background: #FFFFFF; box-shadow: 0 7px 22px rgba(16,42,86,.06); }
 .highlight-section h3 { margin: 0; color: #102A56; font-weight: 800; }
 .highlight-section p { color: #526176; }

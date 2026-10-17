@@ -21,7 +21,7 @@
 .split-middle { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 28px; }
 .middle-text { min-width: 0; }
 .history-image { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 260px; max-height: 440px; overflow: hidden; border-radius: 14px; background: #F6F8FC; box-shadow: 0 10px 24px rgba(16,42,86,.12); }
-.history-img { display: block; width: 100%; height: 100%; min-height: 260px; max-height: 440px; object-fit: contain; object-position: center; }
+.history-img { display: block; width: 100%; height: 100%; min-height: 260px; max-height: 440px; object-fit: cover; object-position: center; }
 .history-wordmark { min-height: 300px; padding: 32px; color: #102A56; background: linear-gradient(135deg, #FFF8DF, #EEF3FA); text-align: center; }
 .history-wordmark span { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; }
 .final-location { margin-top: 22px; padding: 18px; border-left: 5px solid #F4C542; border-radius: 0 10px 10px 0; color: #334155; background: #FFF8DF; }

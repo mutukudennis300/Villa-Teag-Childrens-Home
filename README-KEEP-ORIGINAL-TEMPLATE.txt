@@ -5,7 +5,12 @@ This project is a plain HTML/CSS/JavaScript website. Open index.html through a l
 ASSETS
 - css/bootstrap.min.css is the locally bundled Bootstrap stylesheet used by the pages.
 - js/bootstrap.bundle.min.js is the matching Bootstrap JavaScript bundle.
-- Existing JPG and JPEG photos in images/ are referenced directly; no conversion script is required.
+- Original, non-WebP photos belong in images_backup/.
+- The website uses WebP photos from images/, resized to at most 1800 pixels and saved at quality 75.
+- Run .\convert.bat from PowerShell or Command Prompt in the project folder to convert new photos from images_backup/ into images/. The script skips existing WebP files, keeps the originals, and updates gallery-images.json so new photos appear in the gallery.
+- The converter asks for alt text for each new photo when run interactively. Existing alt text is preserved on later runs.
+- Conversion requires Python 3 and Pillow. Install Pillow with: py -3 -m pip install -r requirements-convert.txt
+- On Windows, use .\convert.bat rather than the bare command "convert", which is reserved for the system disk-conversion utility.
 - Bootstrap Icons are loaded from jsDelivr, so those icons require an internet connection.
 
 DEPLOYMENT CHECKS
