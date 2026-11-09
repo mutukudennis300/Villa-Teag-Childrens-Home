@@ -1,13 +1,21 @@
 /* Villa Teag homepage — refined editorial styling inspired by the approved Fountain of Life direction.
    Preserves the original HTML structure, local imagery, navigation and section layout. */
-:root{--vt-forest:#102a56;--vt-forest-deep:#0a1b36;--vt-cream:#f6f8fc;--vt-paper:#fff;--vt-gold:#f4c542;--vt-ink:#263449;--vt-muted:#617086;--vt-line:#e2e8f0}
+:root{--vt-forest:#102a56;--vt-forest-deep:#0a1b36;--vt-cream:#f6f8fc;--vt-paper:#fff;--vt-gold:#f4c542;--vt-amber:#8a4b08;--vt-ink:#263449;--vt-muted:#617086;--vt-line:#e2e8f0}
 body{color:var(--vt-ink);background:var(--vt-paper);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.7}
 .site-header{background:linear-gradient(110deg,#0a1b36,#102a56,#193d70);box-shadow:0 4px 18px rgba(10,27,54,.18);border-bottom:3px solid var(--vt-gold)}
 .navbar-hub{max-width:1500px;margin:0 auto;padding:10px clamp(14px,4vw,48px)}
-.brand-logo{color:#fff!important;font-weight:800;letter-spacing:.01em}
+.brand-logo{display:flex;align-items:center;gap:11px;color:#fff!important;font-weight:800;letter-spacing:.01em;text-decoration:none}
+.brand-logo:hover{color:#fff!important}
+.brand-mark{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border:2px solid var(--vt-gold);border-radius:50%;color:var(--vt-forest-deep);background:var(--vt-gold);font-size:.92rem;font-weight:900;letter-spacing:-.04em;box-shadow:0 0 0 3px rgba(244,197,66,.18)}
+.brand-name{display:grid;line-height:1.15}
+.brand-name>span{margin-top:3px;color:#e3eaf5;font-size:.73rem;font-weight:600;letter-spacing:.045em}
 .logo-img{border-radius:50%;object-fit:contain}
 .horizontal-menu a{color:#fff!important;font-weight:650;transition:color .2s ease,background .2s ease}
 .horizontal-menu a:hover,.horizontal-menu a.active{color:#fff!important;background:rgba(244,197,66,.18);border-radius:5px}
+.horizontal-menu a.nav-contact-cta,.horizontal-menu a.nav-support-cta{padding:9px 12px;border:1px solid var(--vt-gold);border-radius:4px;font-weight:800;text-align:center}
+.horizontal-menu a.nav-contact-cta{color:var(--vt-forest-deep)!important;background:var(--vt-gold)}
+.horizontal-menu a.nav-support-cta{color:#fff!important;background:var(--vt-amber);border-color:var(--vt-amber)}
+.horizontal-menu a.nav-contact-cta:hover,.horizontal-menu a.nav-contact-cta:focus-visible,.horizontal-menu a.nav-support-cta:hover,.horizontal-menu a.nav-support-cta:focus-visible{color:#fff!important;background:var(--vt-amber);border-color:var(--vt-amber)}
 .page-header-banner{padding:32px 20px;background:linear-gradient(120deg,#0a1b36,#102a56);color:#fff;border-bottom:4px solid var(--vt-gold);box-shadow:none;text-align:center}
 .page-header-content{max-width:1200px;margin:auto}
 .page-header-banner h1{color:#fff;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:850;letter-spacing:-.025em}
@@ -42,15 +50,25 @@ body{color:var(--vt-ink);background:var(--vt-paper);font-family:Inter,"Segoe UI"
 .life-card h3,.hub-card h3{color:var(--vt-forest)}
 .life-card img{display:block;object-fit:cover}
 .impact-section{background:#eef1e9;padding:clamp(44px,6vw,76px) 20px}
+.impact-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:860px;margin:30px auto 34px}
+.impact-metric{padding:24px;border:1px solid var(--vt-line);border-top:3px solid var(--vt-gold);border-radius:5px;background:#fff;box-shadow:0 8px 26px rgba(16,42,86,.055);text-align:center;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.impact-metric-number{display:block;color:var(--vt-forest);font-size:clamp(2.5rem,5vw,3.8rem);font-weight:850;line-height:1.1}
+.impact-metric h3{margin:8px 0;color:var(--vt-forest);font-size:1.15rem}
+.impact-metric p{margin:0;color:var(--vt-muted)}
 .stat-card{border-top:3px solid var(--vt-gold)}
 .stat-number{color:var(--vt-forest)}
 .hub-card{border-bottom:3px solid var(--vt-gold);text-align:left}
+.hub-card,.life-card,.stat-card{transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease}
 .hub-card:hover,.life-card:hover,.stat-card:hover{box-shadow:0 16px 32px rgba(16,42,86,.11)}
+.impact-metric:hover,.stat-card:hover,.hub-card:hover,.life-card:hover{color:#fff;background:var(--vt-amber);border-color:#fff}
+.hub-card:hover{color:#fff!important}
+.impact-metric:hover .impact-metric-number,.impact-metric:hover h3,.impact-metric:hover p,.stat-card:hover .stat-number,.stat-card:hover .stat-label,.stat-card:hover .stat-description,.hub-card:hover .card-icon,.hub-card:hover h3,.hub-card:hover p,.life-card:hover h3,.life-card:hover p{color:#fff}
+.impact-metric:hover p,.hub-card:hover h3,.hub-card:hover p,.life-card:hover h3,.life-card:hover p,.stat-card:hover .stat-description{color:#fff!important}
 .contact-summary{background:var(--vt-forest)!important;color:#fffdf8}
 .contact-summary h2,.contact-summary h3{color:#fffdf8}
 .whatsapp-float{box-shadow:0 8px 24px rgba(16,42,86,.2)}
 footer,.site-footer{background:var(--vt-forest-deep)!important}
 :focus-visible{outline:3px solid var(--vt-gold);outline-offset:3px}
 @media(max-width:800px){.hero-hub{min-height:560px;height:auto}.hero-text-box{text-align:left;padding:56px 0}.hero-text-box h1{font-size:clamp(2.25rem,9vw,3.4rem)}.hero-btns{align-items:stretch}.hero-btn{min-width:0}.story-wrapper{gap:28px}.impact-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-grid,.stories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.page-header-banner{text-align:center}.location-info{justify-content:center}.daily-life-grid,.impact-stats,.hub-grid,.stories-grid{grid-template-columns:1fr}.hero-btns{flex-direction:column;align-items:flex-start}.hero-btn{width:min(100%,280px)}.story-wrapper{display:flex;flex-direction:column}.story-image,.story-content{width:100%}}
+@media(max-width:560px){.page-header-banner{text-align:center}.location-info{justify-content:center}.daily-life-grid,.impact-metrics,.impact-stats,.hub-grid,.stories-grid{grid-template-columns:1fr}.hero-btns{flex-direction:column;align-items:flex-start}.hero-btn{width:min(100%,280px)}.story-wrapper{display:flex;flex-direction:column}.story-image,.story-content{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
