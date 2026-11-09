@@ -2,8 +2,8 @@
 (() => {
   'use strict';
 
-  const SITE_WHATSAPP = 'https://wa.me/254716863607';
-  const SITE_EMAIL = 'fountainboys300@gmail.com';
+  const SITE_WHATSAPP = 'https://wa.me/254722221267';
+  const SITE_EMAIL = 'villateag@gmail.com';
 
   function showCopyFeedback(value, copied) {
     if (copied) window.alert(`Copied: ${value}`);
@@ -28,8 +28,8 @@
   window.openDonationLink = function openDonationLink(amount = '') {
     const numeric = Number(String(amount).trim());
     const message = amount && Number.isFinite(numeric) && numeric > 0
-      ? `Hello Fountain of Life, I would like to donate Ksh ${numeric.toLocaleString('en-KE')}. Please confirm the correct recipient and reference.`
-      : 'Hello Fountain of Life, I would like to ask how to support the home.';
+      ? `Hello Villa Teag Children's Home, I would like to donate Ksh ${numeric.toLocaleString('en-KE')}. Please confirm the correct recipient and reference.`
+      : 'Hello Villa Teag Children\'s Home, I would like to ask how to support the home.';
     window.open(`${SITE_WHATSAPP}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   };
 

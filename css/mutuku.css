@@ -103,6 +103,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .navbar-hub {
+  position: relative;
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,6 +120,7 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   gap: 11px;
   flex: 0 0 auto;
+  max-width: calc(100% - 92px);
   color: var(--white) !important;
   font-size: 1.15rem;
   font-weight: 800;
@@ -209,12 +212,21 @@ input#menu-toggle {
 }
 
 @media (max-width: 1024px) {
-  .hamburger { display: flex; }
-  .navbar-hub { justify-content: space-between; }
+  .hamburger {
+    display: flex;
+    position: relative;
+    z-index: 2105;
+    margin-left: auto;
+  }
+  .navbar-hub {
+    justify-content: space-between;
+    position: relative;
+  }
   .horizontal-menu {
     position: fixed;
     top: var(--header-height);
     right: 0;
+    left: auto;
     width: min(100%, 420px);
     height: calc(100dvh - var(--header-height));
     display: none;
@@ -225,7 +237,8 @@ input#menu-toggle {
     flex-wrap: nowrap;
     gap: 0;
     overflow-y: auto;
-    background: #FFFFFF;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(8px);
     box-shadow: -10px 12px 30px rgba(10, 27, 54, .16);
   }
   .horizontal-menu li { width: 100%; border-bottom: 1px solid var(--border-color); }
@@ -255,7 +268,7 @@ input#menu-toggle {
 @media (max-width: 480px) {
   :root { --header-height: 78px; }
   .navbar-hub { padding: 8px 12px; }
-  .brand-logo { gap: 7px; font-size: .82rem; }
+  .brand-logo { gap: 7px; font-size: .82rem; max-width: calc(100% - 62px); }
   .brand-logo .logo-img { height: 34px; }
   .hamburger { width: 27px; height: 24px; }
 }
