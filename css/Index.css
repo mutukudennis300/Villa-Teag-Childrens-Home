@@ -26,12 +26,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.page-header-banner h1 {
+.page-header-banner .page-header-title {
   margin: 0 0 8px;
   color: #ffffff;
   font-size: clamp(1.45rem, 2.7vw, 2.2rem);
   font-weight: 900;
   letter-spacing: 0.2px;
+  line-height: 1.2;
 }
 .location-info {
   display: flex;
