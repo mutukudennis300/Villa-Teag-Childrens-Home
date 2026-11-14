@@ -97,6 +97,14 @@
     .map-container { margin: 8px auto 45px; max-width: 1120px; background: var(--vt-paper); padding: 30px 20px; border: 1px dashed #cbd5e1; border-radius: 12px; text-align: center; }
     .map-container h2 { color: var(--vt-navy); font-size: 1.2rem; }
     .map-container p { max-width: 760px; margin: 0 auto; color: #53657a; line-height: 1.7; }
+    .map-embed {
+      width: 100%;
+      min-height: 360px;
+      margin-top: 18px;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(16, 42, 86, .08);
+    }
     .site-footer { background: var(--vt-navy-dark); color: #edf2fa; border-top: 4px solid var(--vt-yellow); }
     .site-footer .footer-title { color: #fff; }
     .site-footer a { color: #edf2fa; text-decoration: none; }
@@ -216,8 +224,15 @@
       </section>
 
       <section class="map-container" aria-labelledby="location-privacy-heading">
-        <h2 id="location-privacy-heading"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Child Safety and Location Privacy</h2>
-        <p>Villa Teag is located in Dandora Phase V, Nairobi, Kenya. To protect children's safety and privacy, the website does not publish a precise residential address or map. Visits can be arranged by contacting the home directly.</p>
+        <h2 id="location-privacy-heading"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Location</h2>
+        <iframe
+          class="map-embed"
+          title="Map showing Dandora Phase V, Nairobi, Kenya"
+          src="https://www.google.com/maps?q=Dandora%20Phase%20V%20Nairobi%20Kenya&z=13&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
       </section>
     </div>
   </main>
