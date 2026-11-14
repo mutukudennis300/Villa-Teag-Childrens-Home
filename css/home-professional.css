@@ -16,6 +16,7 @@ body{color:var(--vt-ink);background:var(--vt-paper);font-family:Inter,"Segoe UI"
 .horizontal-menu a.nav-contact-cta{color:var(--vt-forest-deep)!important;background:var(--vt-gold)}
 .horizontal-menu a.nav-support-cta{color:#fff!important;background:var(--vt-amber);border-color:var(--vt-amber)}
 .horizontal-menu a.nav-contact-cta:hover,.horizontal-menu a.nav-contact-cta:focus-visible,.horizontal-menu a.nav-support-cta:hover,.horizontal-menu a.nav-support-cta:focus-visible{color:#fff!important;background:var(--vt-amber);border-color:var(--vt-amber)}
+@media(max-width:1024px){.horizontal-menu a{color:var(--vt-forest)!important}.horizontal-menu a:hover,.horizontal-menu a.active{color:var(--vt-forest-deep)!important;background:#fff7d6}}
 .page-header-banner{padding:32px 20px;background:linear-gradient(120deg,#0a1b36,#102a56);color:#fff;border-bottom:4px solid var(--vt-gold);box-shadow:none;text-align:center}
 .page-header-content{max-width:1200px;margin:auto}
 .page-header-banner h1{color:#fff;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:850;letter-spacing:-.025em}
