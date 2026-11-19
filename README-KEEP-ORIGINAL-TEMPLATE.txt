@@ -14,6 +14,11 @@ ASSETS
 - Bootstrap Icons are loaded from jsDelivr, so those icons require an internet connection.
 
 DEPLOYMENT CHECKS
+- The GitHub Pages custom domain is villateagchildrenshome.org. In Safaricom's DNS manager, remove conflicting web-hosting records for @ and www, add A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153, and 185.199.111.153, and add a CNAME for www pointing to mutukudennis300.github.io. Keep the CNAME file in the published site.
+- In the repository's Settings > Pages, set the custom domain to villateagchildrenshome.org and enable Enforce HTTPS after DNS has propagated and the certificate is ready. The current domain points to Safaricom hosting and shows an empty directory until its DNS records are changed.
+- DNS changes must be made by someone with access to the Safaricom account. Allow time for DNS propagation, then verify both https://villateagchildrenshome.org and https://www.villateagchildrenshome.org and confirm the www address redirects to the apex domain.
+- In Google Search Console, add villateagchildrenshome.org as a Domain property and copy Google's verification TXT record into Safaricom DNS at the root (@, or the equivalent blank host field). Add it alongside the website records; do not replace the A or CNAME records. Verify ownership after the TXT record propagates.
+- Once the website changes are published and the custom domain is serving the site, submit https://villateagchildrenshome.org/sitemap.xml in Search Console's Sitemaps report and request indexing for the home page. Google decides when and whether pages appear in search results.
 - The site's factual content, general location, and published photographs have been reviewed and approved by Villa Teag management.
 - The privacy and safeguarding policies have been reviewed and approved by management.
 - The contact and volunteer forms use FormSubmit and deliver submissions to villateag@gmail.com. Complete FormSubmit's first-use email activation if prompted, then test both forms on the deployed site.
